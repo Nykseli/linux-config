@@ -1,0 +1,59 @@
+{
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Monokai",
+    "sublimeTextKeymap.promptV3Features": true,
+    "telemetry.enableTelemetry": false,
+    "keyboard.dispatch": "keyCode",
+    "[python]": {
+
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    // "entity.name.function",
+                    "meta.function-call.generic",
+                    // "meta.function-call.object",
+                    // "meta.function-call.python",
+                    // "meta.function-call.static",
+                    // "meta.method-call.java meta.method",
+                    // "meta.method.groovy",
+                    // "support.function.any-method.lua",
+                    // "keyword.operator.function.infix"
+                    "entity.name.function",
+                    "support.function"
+                ],
+                "settings": {
+                    "foreground": "#50FA7B",
+
+
+                }
+            }
+        ]
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "window.zoomLevel": 0,
+    "files.insertFinalNewline": true,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "editor.rulers": [
+        80,
+        100,
+        120
+    ],
+    "editor.renderWhitespace": "boundary",
+    "files.trimTrailingWhitespace": true,
+    "editor.minimap.enabled": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.renderControlCharacters": false,
+    "java.configuration.checkProjectSettingsExclusions": false,
+    "files.associations": {
+        "*.asm": "asm",
+        "*.inc": "asm"
+    },
+    "[asm]": {},
+    "telemetry.enableCrashReporter": false,
+    "editor.formatOnPaste": true,
+    "editor.snippetSuggestions": "top",
+}
+
