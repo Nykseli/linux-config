@@ -1,0 +1,46 @@
+set nocompatible
+set number
+set noswapfile
+syntax enable
+filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+set smartindent
+set showmatch " highlight matching [{()}]
+set wildignore+=*.so,*.o,*.swp,*/node_modules/*
+set colorcolumn=80,100,120
+set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:· ",space:·
+set list
+colorscheme monokai
+
+" hi Comment ctermfg=242 ctermbg=NONE cterm=NONE guifg=#75715e guibg=NONE gui=NONE
+" show leading spaces
+hi Conceal guibg=NONE ctermbg=NONE ctermfg=242
+autocmd BufWinEnter,BufReadPre * setl conceallevel=2 concealcursor=nv
+autocmd BufWinEnter,BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
+
+" hi NonText ctermfg=59 ctermbg=236 cterm=NONE guifg=#49483e guibg=#31322c gui=NONE
+hi NonText ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+" autocmd BufReadPre * setl conceallevel=2 concealcursor=nv
+" autocmd BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
+
+" tag jumping
+" command! MakeTags !ctags -R .
+
+" move between buffers
+map <C-Left> <Esc>:bprev<CR>
+map <C-Right> <Esc>:bnext<CR>
+
+" move lines up and down
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
+" switch to left / right split (mostly for Nerd Tree)
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+
+" always split new visual file on right
+set splitright
