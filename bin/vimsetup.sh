@@ -11,6 +11,7 @@ cat vimrc.template > $TMP_FILE
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
 echo "\" Nerd tree" >> $TMP_FILE
 echo "map <C-b> :NERDTreeToggle<CR>" >> $TMP_FILE
+echo "let NERDTreeShowHidden=1" >> $TMP_FILE
 echo 'autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " autoquit if only nerdtree is open' >> $TMP_FILE
 
 # cntrlp plugin
