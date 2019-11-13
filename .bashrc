@@ -111,10 +111,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=/opt/mxe/usr/bin:/home/nykseli/build-i686-elf/linux/output/bin:/home/nykseli/build-i686-elf/windows/output/bin:/home/nykseli/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
-PATH=/usr/local/Qt-5.12.2/bin:$PATH # Qt build from source
-source /home/nykseli/.tmc-autocomplete.sh || true
 alias tree="tree --dirsfirst"
-alias mplayer="/home/nykseli/Documents/qt-tutorial/FreeWamp/player" # freewamp
-alias nonet="sudo unshare -n sudo -u nykseli" #start program without netprivileges
+alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 

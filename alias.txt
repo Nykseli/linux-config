@@ -1,5 +1,5 @@
 # shows the tree command directiories first
 alias tree="tree --dirsfirst"
 # starts program without network priviliges. change -u to something else than nykseli if needed
-alias nonet="sudo unshare -n sudo -u nykseli" #start program without netprivileges
+alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 
