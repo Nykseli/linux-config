@@ -18,13 +18,22 @@ hi Conceal guibg=NONE ctermbg=NONE ctermfg=242
 autocmd BufWinEnter,BufReadPre * setl conceallevel=2 concealcursor=nv
 autocmd BufWinEnter,BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
 
+hi Start1 guibg=NONE ctermbg=NONE ctermfg=242
+hi Start2 guibg=NONE ctermbg=NONE ctermfg=242
+match Start1 / \+$/
+2match Start2 /\t/
 " hi NonText ctermfg=59 ctermbg=236 cterm=NONE guifg=#49483e guibg=#31322c gui=NONE
 hi NonText ctermfg=NONE ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 " autocmd BufReadPre * setl conceallevel=2 concealcursor=nv
 " autocmd BufReadPre * syn match LeadingSpace /\(^ *\)\@<= / containedin=ALL conceal cchar=·
 
+" Python tabs as 4 spaces
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+set rtp+=$GOROOT/misc/vim
+set tabstop=4
+
 " tag jumping
-" command! MakeTags !ctags -R .
+command! MakeTags !ctags -R .
 
 " move between buffers
 map <C-Left> <Esc>:bprev<CR>
