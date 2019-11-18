@@ -111,6 +111,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# If in tmux, disable bash history
+if [[ ! -z "${TMUX}" ]]; then
+    # set +o history
+    rm /tmp/.tmpbash_history.txt.tmp &> /dev/null
+    history -r /tmp/.tmpbash_history.txt.tmp
+    export HISTFILE=/tmp/.tmpbash_history.txt.tmp
+fi
+
 alias tree="tree --dirsfirst"
 alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 
