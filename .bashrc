@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|xterm-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -56,10 +56,30 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+GIT_BRANCH=""
+# if current directory has git show the current brach name
+function git_branch {
+    if [ -d './.git' ]; then
+        GIT_BRANCH=`git rev-parse --abbrev-ref HEAD`
+    fi
+
+    # TODO: color
+    if [ "$GIT_BRANCH" ]; then
+        printf " ($GIT_BRANCH)"
+    fi
+
+}
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    # Show only the current directory name without parent directories and git branch name if in git repo directory
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$(git_branch)\[\033[01;34m\]\$\[\033[00m\] '
+    # Uncomment for long current directory (the original PS1)
+    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    # Show only the current directory name without parent directories and git branch name if in git repo directory
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W$(git_branch)\$ '
+    # Uncomment for long current directory (the original PS1)
+    # PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -76,12 +96,12 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
@@ -118,7 +138,12 @@ if [[ ! -z "${TMUX}" ]]; then
     rm /tmp/.tmpbash_history.txt.tmp &> /dev/null
     history -r /tmp/.tmpbash_history.txt.tmp
     export HISTFILE=/tmp/.tmpbash_history.txt.tmp
+else
+    # Tell a fortune if not in termux enviroment
+    fortune|cowsay
 fi
+
+unset LS_COLORS
 
 alias tree="tree --dirsfirst"
 alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
