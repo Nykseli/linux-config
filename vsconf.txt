@@ -55,5 +55,17 @@
     "telemetry.enableCrashReporter": false,
     "editor.formatOnPaste": true,
     "editor.snippetSuggestions": "top",
+    "go.buildOnSave": "off",
+    "java.autobuild.enabled": false,
+    "java.saveActions.organizeImports": true,
+    "[javascriptreact]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+    },
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "dart.flutterSdkPath": "/home/nykseli/Documents/flutter-lib/flutter",
+    "dart.allowAnalytics": false, 
 }
 
