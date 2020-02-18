@@ -145,11 +145,12 @@ if [[ ! -z "${TMUX}" ]]; then
     export HISTFILE=/tmp/.tmpbash_history.txt.tmp
 else
     # Tell a fortune if not in termux enviroment
-    fortune|cowsay
+    fortune -a|cowsay
 fi
 
 unset LS_COLORS
 
+export EDITOR=vi
 alias tree="tree --dirsfirst"
 alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 
