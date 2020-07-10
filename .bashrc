@@ -143,6 +143,8 @@ if [[ ! -z "${TMUX}" ]]; then
     rm /tmp/.tmpbash_history.txt.tmp &> /dev/null
     history -r /tmp/.tmpbash_history.txt.tmp
     export HISTFILE=/tmp/.tmpbash_history.txt.tmp
+    # Also support better colors in tmux
+    export TERM=xterm-256color
 else
     # Tell a fortune if not in termux enviroment
     fortune -a|cowsay
