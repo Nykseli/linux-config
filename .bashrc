@@ -153,6 +153,6 @@ fi
 unset LS_COLORS
 
 export EDITOR=vi
-alias tree="tree --dirsfirst"
+alias tree="tree --dirsfirst -C"
 alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 
