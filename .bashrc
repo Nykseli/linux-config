@@ -157,3 +157,15 @@ alias tree="tree --dirsfirst -C"
 alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 alias notes="nonet code ~/Documents/my-notes"
 
+# Prepend the PS1 with current time (call this to enable/disable)
+show_time=false
+function showtime() {
+    if ! $show_time; then
+        PS1="\D{%H:%M:%S} $PS1"
+        show_time=true
+    else
+        PS1=$DEF_PS1
+        show_time=false
+    fi
+}
+DEF_PS1=$PS1
