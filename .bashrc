@@ -156,6 +156,8 @@ export EDITOR=vi
 alias tree="tree --dirsfirst -C"
 alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 alias notes="nonet code ~/Documents/my-notes"
+alias pscripts="jq .scripts package.json"
+alias nmake="nice -n +15 make"
 
 # Prepend the PS1 with current time (call this to enable/disable)
 show_time=false
