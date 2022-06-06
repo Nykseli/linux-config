@@ -159,6 +159,21 @@ alias notes="nonet code ~/Documents/my-notes"
 alias pscripts="jq .scripts package.json"
 alias nmake="nice -n +15 make"
 
+# Copy things from a file to clip board
+function clipper {
+    if [[ -z $1 ]]; then
+        echo Give file as an argument
+        return
+    fi
+
+    if [[ ! -f $1 ]]; then
+        echo Argument "'$1'" is not a file
+        return
+    fi
+
+    cat $1 | xclip -sel clip
+}
+
 # Prepend the PS1 with current time (call this to enable/disable)
 show_time=false
 function showtime() {
