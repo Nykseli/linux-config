@@ -53,7 +53,7 @@
     },
     "[asm]": {},
     "telemetry.enableCrashReporter": false,
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
     "editor.snippetSuggestions": "top",
     "go.buildOnSave": "off",
     "java.autobuild.enabled": false,
@@ -65,7 +65,7 @@
     "javascript.updateImportsOnFileMove.enabled": "never",
     "dart.debugExternalLibraries": false,
     "dart.debugSdkLibraries": false,
-    "dart.flutterSdkPath": "/home/nykseli/Documents/flutter-lib/flutter",
-    "dart.allowAnalytics": false, 
+    "dart.allowAnalytics": false,
+    "editor.bracketPairColorization.enabled": false,
 }
 
