@@ -75,9 +75,16 @@ function git_branch {
 
 }
 
+function wps1 {
+    RES=$?
+    if [ $RES != 0 ]; then
+        printf '\e[31mexit ('$RES') \e[00m'
+    fi
+}
+
 if [ "$color_prompt" = yes ]; then
     # Show only the current directory name without parent directories and git branch name if in git repo directory
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$(git_branch)\[\033[01;34m\]\$\[\033[00m\] '
+    PS1='$(wps1)${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]$(git_branch)\[\033[01;34m\]\$\[\033[00m\] '
     # Uncomment for long current directory (the original PS1)
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
