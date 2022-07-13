@@ -165,6 +165,7 @@ alias nonet="sudo unshare -n sudo -u $USER" #start program without netprivileges
 alias notes="nonet code ~/Documents/my-notes"
 alias pscripts="jq .scripts package.json"
 alias nmake="nice -n +15 make"
+alias cdtmp="cd $(mktemp -d)"
 
 # Copy things from a file to clip board
 function clipper {
