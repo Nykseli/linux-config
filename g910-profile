@@ -1,0 +1,41 @@
+# G910 keyboard color profile
+# see https://github.com/MatMoul/g810-led
+# Usage: g910-led -p g910-profile
+
+var black 000000
+# var grey A3A3A3
+var grey 737373
+var white FFFFFF
+var purple 800080
+
+a $purple
+
+g fkeys $white
+g arrows $white
+g functions $white
+
+g modifiers $grey
+k tilde $grey
+k 1 $grey
+k 2 $grey
+k 3 $grey
+k 4 $grey
+k 5 $grey
+k 6 $grey
+k 7 $grey
+k 8 $grey
+k 9 $grey
+k 0 $grey
+k minus $grey
+k equal $grey
+k backspace $grey
+k tab $grey
+k capslock $grey
+k enter $grey
+
+k w $black
+k a $black
+k s $black
+k d $black
+
+c
