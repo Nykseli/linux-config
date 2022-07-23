@@ -1,0 +1,9 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        // Requires https://marketplace.visualstudio.com/items?itemName=dzhavat.bracket-pair-toggler
+        // TODO: create own version of it
+        "key": "ctrl+alt+m",
+        "command": "bracket-pair-toggler.run"
+    }
+]
