@@ -1,6 +1,9 @@
+#!/usr/bin/g910-led -p
+
 # G910 keyboard color profile
 # see https://github.com/MatMoul/g810-led
-# Usage: g910-led -p g910-profile
+# Usage: ./g910-profile
+# See g910-led --help for option values
 
 var black 000000
 # var grey A3A3A3
@@ -37,5 +40,7 @@ k w $black
 k a $black
 k s $black
 k d $black
+
+k logo $black
 
 c
