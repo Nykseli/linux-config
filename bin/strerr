@@ -1,0 +1,7 @@
+#!/usr/bin/env python
+
+import os
+import sys
+
+msg = os.strerror(int(sys.argv[1]))
+print(f"Message: '{msg}'")
