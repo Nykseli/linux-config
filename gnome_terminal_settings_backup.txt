@@ -1,0 +1,64 @@
+[legacy]
+dark-theme=true
+schema-version=uint32 3
+
+[legacy/profiles:]
+default='2b3d2eff-6e36-4135-a24e-ebde27a4c855'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '6de5a6fc-65a4-4507-ac87-34054d6f0874', 'db4480e9-1d5b-4276-8dd5-16d74fc5365a', 'd26cc8a2-48dd-4fa6-a45a-7508c875e024', '2b3d2eff-6e36-4135-a24e-ebde27a4c855']
+
+[legacy/profiles:/:2b3d2eff-6e36-4135-a24e-ebde27a4c855]
+audible-bell=false
+background-color='rgb(46,52,54)'
+bold-is-bright=true
+default-size-columns=132
+default-size-rows=43
+font='Droid Sans Mono 11'
+foreground-color='rgb(211,215,207)'
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-custom-command=false
+use-system-font=false
+use-theme-colors=true
+visible-name='Unnamed (droid)'
+
+[legacy/profiles:/:6de5a6fc-65a4-4507-ac87-34054d6f0874]
+background-color='rgb(214,31,31)'
+bold-is-bright=false
+font='Monospace 9'
+foreground-color='rgb(29,255,0)'
+highlight-background-color='rgb(22,4,4)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(255,255,255)'
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(120,225,21)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-system-font=true
+use-theme-colors=false
+visible-name='weirdcolortest'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(46,52,54)'
+bold-is-bright=true
+default-size-columns=132
+default-size-rows=43
+font='Monospace 11'
+foreground-color='rgb(211,215,207)'
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(78,154,6)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-custom-command=false
+use-system-font=true
+use-theme-colors=true
+
+[legacy/profiles:/:d26cc8a2-48dd-4fa6-a45a-7508c875e024]
+background-color='rgb(255,255,255)'
+bold-is-bright=false
+font='Monospace 9'
+foreground-color='rgb(23,20,33)'
+highlight-background-color='rgb(22,4,4)'
+highlight-colors-set=false
+highlight-foreground-color='rgb(255,255,255)'
+palette=['rgb(46,52,54)', 'rgb(204,0,0)', 'rgb(120,225,21)', 'rgb(196,160,0)', 'rgb(52,101,164)', 'rgb(117,80,123)', 'rgb(6,152,154)', 'rgb(211,215,207)', 'rgb(85,87,83)', 'rgb(239,41,41)', 'rgb(138,226,52)', 'rgb(252,233,79)', 'rgb(114,159,207)', 'rgb(173,127,168)', 'rgb(52,226,226)', 'rgb(238,238,236)']
+use-system-font=true
+use-theme-colors=false
+visible-name='whitebg'
+
+[legacy/profiles:/:db4480e9-1d5b-4276-8dd5-16d74fc5365a]
+font='Monospace Bold 10'
+use-system-font=false
+visible-name='BiggerFont'
