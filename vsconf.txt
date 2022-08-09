@@ -67,5 +67,6 @@
     "dart.debugSdkLibraries": false,
     "dart.allowAnalytics": false,
     "editor.bracketPairColorization.enabled": false,
+    "editor.fontFamily": "DejaVuSansMono.ttf 'monospace', monospace"
 }
 
