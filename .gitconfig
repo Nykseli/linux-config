@@ -2,3 +2,5 @@
 		tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [pull]
 		rebase = false
+[init]
+		defaultBranch = main
