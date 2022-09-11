@@ -78,7 +78,7 @@ function git_branch {
 function wps1 {
     RES=$?
     if [ $RES != 0 ]; then
-        printf '\e[31mexit ('$RES') \e[00m'
+        printf '\033[00;31mexit ('$RES') \033[00m'
     fi
 }
 
