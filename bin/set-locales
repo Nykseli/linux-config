@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# see full list of locales with `localectl status`
+local_cmd="sudo localectl set-locale"
+$local_cmd "LANG=en_US.UTF-8"
+$local_cmd "LC_TIME=en_GB.UTF-8"
+$local_cmd "LC_MEASUREMENT=fi_FI.UTF-8"
