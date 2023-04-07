@@ -1,0 +1,50 @@
+#!/bin/sh
+
+set -e
+
+PROJECT_PWD=$(pwd)
+
+check_cargo_project() {
+    if [ ! -f ./Cargo.toml ]; then
+        echo "No Cargo.toml found in current directory"
+        exit 1
+    fi
+}
+
+setup_mold() {
+    cd $HOME
+    if [ ! -d mold ]; then
+        git clone https://github.com/rui314/mold.git
+        mkdir mold/build
+        cd mold/build
+        git checkout v1.11.0
+        ../install-build-deps.sh
+        cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=c++ ..
+        cmake --build . -j $(nproc)
+    else
+        echo "Mold already setup. Run 'rm -rf ~/mold' to force rebuilding it"
+    fi
+
+    cd $PROJECT_PWD
+}
+
+add_mold_to_project() {
+    mold_bin=$HOME/mold/build/mold
+    file_content="[target.x86_64-unknown-linux-gnu]\nlinker = \"clang\"\nrustflags = [\"-C\", \"link-arg=-fuse-ld="$mold_bin"\"]"
+
+    if [ ! -f .cargo/config.toml ]; then
+        mkdir -p .cargo
+        echo $file_content > .cargo/config.toml
+        echo "Current project will now use mold for linking"
+    else
+        echo ".cargo/config.toml already exists"
+        echo "You can manually add mold linking by adding this to config.toml"
+        echo "----"
+        echo $file_content
+        echo "----"
+    fi
+}
+
+check_cargo_project
+setup_mold
+add_mold_to_project
