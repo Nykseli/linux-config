@@ -34,13 +34,13 @@ add_mold_to_project() {
 
     if [ ! -f .cargo/config.toml ]; then
         mkdir -p .cargo
-        echo $file_content > .cargo/config.toml
+        echo -e $file_content > .cargo/config.toml
         echo "Current project will now use mold for linking"
     else
         echo ".cargo/config.toml already exists"
         echo "You can manually add mold linking by adding this to config.toml"
         echo "----"
-        echo $file_content
+        echo -e $file_content
         echo "----"
     fi
 }
