@@ -18,7 +18,7 @@ setup_mold() {
         mkdir mold/build
         cd mold/build
         git checkout v1.11.0
-        ../install-build-deps.sh
+        sudo ../install-build-deps.sh
         cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=c++ ..
         cmake --build . -j $(nproc)
     else
