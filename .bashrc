@@ -64,7 +64,7 @@ fi
 GIT_BRANCH=""
 # if current directory has git show the current brach name
 function git_branch {
-    if [ -d './.git' ] || -f [ './.git' ]; then
+    if [ -d './.git' ] || [ -f './.git' ]; then
         GIT_BRANCH=`git rev-parse --abbrev-ref HEAD 2> /dev/null`
     fi
 
