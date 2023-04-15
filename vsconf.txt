@@ -4,6 +4,7 @@
     "editor.fontWeight": "normal",
     "sublimeTextKeymap.promptV3Features": true,
     "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "keyboard.dispatch": "keyCode",
     "[python]": {
 
