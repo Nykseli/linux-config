@@ -2,6 +2,9 @@
 
 set -e
 
+# Always use the binary version of echo, not the buildin
+eecho=`which echo`
+
 PROJECT_PWD=$(pwd)
 
 check_cargo_project() {
@@ -34,14 +37,14 @@ add_mold_to_project() {
 
     if [ ! -f .cargo/config.toml ]; then
         mkdir -p .cargo
-        echo -e $file_content > .cargo/config.toml
-        echo "Current project will now use mold for linking"
+        $eecho -e $file_content > .cargo/config.toml
+        $eecho "Current project will now use mold for linking"
     else
-        echo ".cargo/config.toml already exists"
-        echo "You can manually add mold linking by adding this to config.toml"
-        echo "----"
-        echo -e $file_content
-        echo "----"
+        $eecho ".cargo/config.toml already exists"
+        $eecho "You can manually add mold linking by adding this to config.toml"
+        $eecho "----"
+        $eecho -e $file_content
+        $eecho "----"
     fi
 }
 
