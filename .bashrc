@@ -169,8 +169,8 @@ alias notes="nonet code ~/Documents/my-notes"
 alias pscripts="jq .scripts package.json"
 alias nmake="nice -n +15 make"
 alias cdtmp="cd $(mktemp -d)"
-alias pmt="path-manager --mode tui"
-alias pma="path-manager --mode add-path"
+alias pmt="path-manager tui"
+alias pma="path-manager add-path"
 
 # Copy things from a file to clip board
 function clipper {
