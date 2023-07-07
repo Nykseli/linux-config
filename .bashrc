@@ -171,6 +171,7 @@ alias nmake="nice -n +15 make"
 alias cdtmp="cd $(mktemp -d)"
 alias pmt="path-manager tui"
 alias pma="path-manager add-path"
+alias pmd="path-manager pwd"
 
 # Copy things from a file to clip board
 function clipper {
