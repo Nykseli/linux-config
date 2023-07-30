@@ -200,3 +200,13 @@ function showtime() {
     fi
 }
 DEF_PS1=$PS1
+
+function addtopath() {
+    if [[ -z $1 ]]; then
+        echo Give path as an argument
+        return
+    fi
+
+    FULL_PWD=$(realpath $1)
+    export PATH=$FULL_PWD:$PATH
+}
