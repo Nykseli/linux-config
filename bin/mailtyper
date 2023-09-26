@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -z "$1" ]]; then
+    echo "Give text file path as an argument"
+fi
+
+
+vim -c 'set filetype=mail' "$1"
