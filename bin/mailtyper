@@ -2,6 +2,7 @@
 
 if [[ -z "$1" ]]; then
     echo "Give text file path as an argument"
+    exit 0
 fi
 
 
