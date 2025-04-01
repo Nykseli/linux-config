@@ -173,6 +173,10 @@ alias pmt="path-manager tui"
 alias pma="path-manager add-path"
 alias pmd="path-manager pwd"
 
+# Better man pages with bat
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
+export MANWIDTH=80
+
 # Copy things from a file to clip board
 function clipper {
     if [[ -z $1 ]]; then
