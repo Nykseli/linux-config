@@ -1,22 +1,20 @@
 #!/bin/bash
 
 # Copy things from a file to clip board
-function clipper {
-    if [[ -z $1 ]]; then
-        echo Give file as an argument
-        return
-    fi
+if [[ -z $1 ]]; then
+    echo Give file as an argument
+    return
+fi
 
-    if [[ $1 == "-" ]]; then
-        xclip -sel clip
-        return
-    fi
+if [[ $1 == "-" ]]; then
+    xclip -sel clip
+    return
+fi
 
-    if [[ ! -f $1 ]]; then
-        echo Argument "'$1'" is not a file
-        return
-    fi
+if [[ ! -f $1 ]]; then
+    echo Argument "'$1'" is not a file
+    return
+fi
 
-    cat $1 | xclip -sel clip
-}
+cat $1 | xclip -sel clip
 
