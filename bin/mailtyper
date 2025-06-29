@@ -1,9 +1,36 @@
 #!/bin/bash
 
+clip=false
+
+POSITIONAL_ARGS=()
+
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -c|--clip)
+      clip=true
+      shift
+      ;;
+    -*|--*)
+      echo "Unknown option $1"
+      exit 1
+      ;;
+    *)
+      POSITIONAL_ARGS+=("$1")
+      shift
+      ;;
+  esac
+done
+
+set -- "${POSITIONAL_ARGS[@]}"
+
 if [[ -z "$1" ]]; then
     echo "Give text file path as an argument"
     exit 0
 fi
 
-
 vim -c 'set filetype=mail' "$1"
+
+if [[ $clip ]]; then
+   clipper "$1"
+   echo file "$1" content was copied to clipboard
+fi
