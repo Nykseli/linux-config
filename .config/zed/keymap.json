@@ -23,8 +23,8 @@
       "alt-cmd-down": "editor::GoToDefinition",
       "ctrl-alt-cmd-down": "editor::GoToDefinitionSplit",
       "alt-shift-cmd-down": "editor::FindAllReferences",
-      "ctrl-.": "editor::GoToHunk",
-      "ctrl-,": "editor::GoToPreviousHunk",
+      // "ctrl-.": "editor::GoToHunk",
+      // "ctrl-,": "editor::GoToPreviousHunk",
       "ctrl-backspace": "editor::DeleteToPreviousWordStart",
       "ctrl-delete": "editor::DeleteToNextWordEnd"
     }
@@ -64,8 +64,9 @@
       "ctrl-j": "editor::MoveLineDown",
       // "shift-k": "editor::HalfPageUp",
       // "shift-j": "editor::HalfPageDown",
-      "shift-k": "vim::ScrollUp",
-      "shift-j": "vim::ScrollDown",
+      // "shift-k": "vim::ScrollUp",
+      // "shift-j": "vim::ScrollDown",
+      "ctrl-.": "editor::ToggleCodeActions",
       "ctrl-a": "editor::SelectAll",
       "ctrl-shift-a": "editor::SelectAll",
       "ctrl-shift-c": "editor::Copy",
