@@ -30,7 +30,7 @@ fi
 
 vim -c 'set filetype=mail' "$1"
 
-if [[ $clip ]]; then
+if [[ "$clip" = true ]]; then
    clipper "$1"
    echo file "$1" content was copied to clipboard
 fi
